@@ -7,7 +7,7 @@ The project is inspired in KSP and I just want to try tro recreate some machanic
 * To ask for input and output use only `iostream` library.
 * Write just the least inside main() to keep the code tidy.
 * To create variables and functions choose names that describes well the perform of it and use **camelCase** .
-* Do not use generic names like *x* or *y* on global variables. (You should instead use them inside functions like `movement()`).
+* Do not use generic names like *x* or *y* on global variables. (You should instead use them inside functions like `movement()` ).
 * Do not put space around parentheses: `if(condition){`.
 
 ## Focus
