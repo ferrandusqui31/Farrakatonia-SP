@@ -10,5 +10,5 @@ The project is inspired in KSP and I just want to try tro recreate some machanic
 * Do not use generic names like *x* or *y* on global variables. You should instead use them inside functions like `movement()`.
 * Do not put space around parentheses: `if(condition){`.
 
-## What to focus on
+## Where to focus on
 At the moment I will be start focusing in simple physics such as kinematics or dynamics.
