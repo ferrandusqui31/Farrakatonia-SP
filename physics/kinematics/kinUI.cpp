@@ -1,6 +1,5 @@
 // File to calculate 1-dimension rectilinear movement accelerated.
 #include <iostream>
-#include <vector>
 #include "kin.h"
 using namespace std;
 
