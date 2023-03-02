@@ -3,6 +3,7 @@ The project is inspired in KSP and I just want to try tro recreate some machanic
 
 ## Formatting
 * The project will be done in c++ (or at least now. I'm using g++ but if it works like the same with another compiler you can use the one you prefer the most).
+* Always use .cpp and .h extensions.
 * Tabs equivalent to 4 spaces.
 * To ask for input and output use only `iostream` library.
 * Write just the least inside `main()` to keep the code tidy.
