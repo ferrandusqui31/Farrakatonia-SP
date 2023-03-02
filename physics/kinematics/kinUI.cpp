@@ -30,7 +30,7 @@ void kinUI(){
         cout << "v0: "; cin >> v;
         cout << "a: "; cin >> a;
 
-        cout << endl << "x: " << fkphy::strghtMov(x, t, v, a) << "m" << endl;
+        cout << endl << "x: " << fkphy::strMov(x, t, v, a) << "m" << endl;
     }
     else if(in == "vel" or in == "v"){
         cout << "v0: "; cin >> v;
@@ -39,8 +39,8 @@ void kinUI(){
         cout << "t: "; t = isEnter();   // Optional value
         cout << "x|Δx: "; x = isEnter();    // Optional value
 
-        if(t != '\0') cout << endl << "vf: " << fkphy::strghtVel(t, v, a) << "m/s" << endl;
-        else if(x != '\0') cout << endl << "vf: " << fkphy::strghtQua(x, v, a) << "m/s" << endl;
+        if(t != '\0') cout << endl << "vf: " << fkphy::strVel(t, v, a) << "m/s" << endl;
+        else if(x != '\0') cout << endl << "vf: " << fkphy::strQua(x, v, a) << "m/s" << endl;
         else cout << "You must provide t or x" << endl;
     }
     else{   // In case the user doesn't write any possibility
