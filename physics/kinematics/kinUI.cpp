@@ -20,7 +20,7 @@ void kinUI(){
 
     if(in == "help"){
         cout << "mov | m - Movement equation (x = x0 + v0*t + 1/2*a^2)" << endl;
-        cout << "vel | v - Velocity equations (vf = v0 + a*t) | (vf^2 = v0^2 + 2*a*Δx)" << endl;
+        cout << "vel | v - Velocity equations (vf = v0 + a*t) | (vf^2 = v0^2 + 2*a*Δx). t and Δx are optional (1 between both)." << endl;
         cout << "par | p - Parabolic movement. Enter the gravity in positive" << endl;
         cout << endl;
         kinUI();
@@ -40,7 +40,7 @@ void kinUI(){
         cout << "t: "; t = isEnter();   // Optional value
         cout << "x|Δx: "; x = isEnter();    // Optional value
 
-        if(t != '\0') cout << endl << "vf: " << fkphy::d1Vel(t, vx, a) << "m/s" << endl;
+        if(t != '\0') cout << endl << "vf: " << fkphy::d1Vel(t, vx, a) << "m/s" << endl;    // Selects between voth formulas
         else if(x != '\0') cout << endl << "vf: " << fkphy::d1Qua(x, vx, a) << "m/s" << endl;
         else cout << "You must provide t or x" << endl;
     }
@@ -54,7 +54,7 @@ void kinUI(){
         cout << "t: "; cin >> t;
 
         array<float, 2> result = fkphy::d2Par(x, y, vx, vy, a, g, t);
-        cout << "x: " << result[0] << "m" << endl;
+        cout << endl << "x: " << result[0] << "m" << endl;
         cout << "y: " << result[1] << "m" << endl;
     }
     else{   // In case the user doesn't write any possibility
