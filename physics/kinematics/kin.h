@@ -27,4 +27,9 @@ array<float, 2> d2Par(float x0, float y0, float v0x, float v0y, float a, float g
     return {x,y};
 }
 
+// Circular movement
+float d2Cir(float phi0, float w0, float t, float alph){
+    return phi0 + w0*t + .5*alph*t*t;
+}
+
 }
