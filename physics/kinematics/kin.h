@@ -27,9 +27,25 @@ array<float, 2> d2Par(float x0, float y0, float v0x, float v0y, float a, float g
     return {x,y};
 }
 
-// Circular movement
+// Circular movement φ = φ0 + ω0*t + 1/2*α*t^2
 float d2Cir(float phi0, float w0, float t, float alph){
     return phi0 + w0*t + .5*alph*t*t;
+}
+
+// Circular to linear and reverse 
+float d2CirLin(bool reverse, float par, float r){
+    if(reverse == false) return par * r;
+    return par / r;
+}
+
+// Normal acceleration an = ω^2*R  &  an = v^2/R
+float d2NA(bool reverse, bool linear, float par, float r){
+    if(reverse == false){
+        if(linear == false) return par*par*r;
+        return par*par/r;
+    }
+    if(linear == false) return sqrt(par/r);
+    return sqrt(par*r);
 }
 
 }
