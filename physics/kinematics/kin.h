@@ -5,7 +5,7 @@ using namespace std;
 namespace fkphy{
 
 // Straight line movement
-// Movement equation: x = x0 + v0*t + 1/2*a^2
+// Movement equation: x = x0 + v0*t + 1/2*a^2  (Also used for circular movement as the equation is the same but with different)
 float d1Mov(float x0, float t, float v0, float a){
     return x0 + v0*t + .5*a*t*t;
 }
@@ -27,12 +27,7 @@ array<float, 2> d2Par(float x0, float y0, float v0x, float v0y, float a, float g
     return {x,y};
 }
 
-// Circular movement φ = φ0 + ω0*t + 1/2*α*t^2
-float d2Cir(float phi0, float w0, float t, float alph){
-    return phi0 + w0*t + .5*alph*t*t;
-}
-
-// Circular to linear and reverse 
+// Circular magnitude to linear and reverse 
 float d2CirLin(bool reverse, float par, float r){
     if(reverse == false) return par * r;
     return par / r;
