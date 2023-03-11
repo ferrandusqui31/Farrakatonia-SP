@@ -2,7 +2,7 @@
 #include <array>
 using namespace std;
 
-namespace fkphy{
+namespace fkPhy{
 
 // Straight line movement
 // Movement equation: x = x0 + v0*t + 1/2*a^2  (Also used for circular movement as the equation is the same but with different)
